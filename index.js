@@ -20,7 +20,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("API Zapatillas Marcelo funcionando");
+  res.send("API Diveme funcionando");
 });
 
 app.use("/api/auth", authRoutes);

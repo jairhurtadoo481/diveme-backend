@@ -21,7 +21,7 @@ const subirQrYape = async (req, res) => {
     if (!req.file) {
       return res.status(400).json({ mensaje: "No se envio ninguna imagen" });
     }
-    const resultado = await subirImagen(req.file.buffer, "zapatillas-marcelo/config");
+    const resultado = await subirImagen(req.file.buffer, "diveme/config");
     const config = await obtenerConfig();
     config.qrYape = resultado.secure_url;
     await config.save();
@@ -35,7 +35,7 @@ const subirQrPlin = async (req, res) => {
     if (!req.file) {
       return res.status(400).json({ mensaje: "No se envio ninguna imagen" });
     }
-    const resultado = await subirImagen(req.file.buffer, "zapatillas-marcelo/config");
+    const resultado = await subirImagen(req.file.buffer, "diveme/config");
     const config = await obtenerConfig();
     config.qrPlin = resultado.secure_url;
     await config.save();
@@ -49,7 +49,7 @@ const subirQrBcp = async (req, res) => {
     if (!req.file) {
       return res.status(400).json({ mensaje: "No se envio ninguna imagen" });
     }
-    const resultado = await subirImagen(req.file.buffer, "zapatillas-marcelo/config");
+    const resultado = await subirImagen(req.file.buffer, "diveme/config");
     const config = await obtenerConfig();
     config.qrBcp = resultado.secure_url;
     await config.save();

@@ -182,7 +182,7 @@ const subirComprobante = async (req, res) => {
       return res.status(400).json({ mensaje: "No se envio ninguna imagen de comprobante" });
     }
 
-    const resultado = await subirImagen(req.file.buffer, "zapatillas-marcelo/comprobantes");
+    const resultado = await subirImagen(req.file.buffer, "diveme/comprobantes");
     reserva.comprobante = resultado.secure_url;
     await reserva.save();
 
