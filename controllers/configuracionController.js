@@ -1,5 +1,5 @@
 const Configuracion = require("../models/Configuracion");
-const subirImagen = require("../config/cloudinaryUpload");
+const { subirImagen } = require("../config/cloudinaryUpload");
 const obtenerConfig = async () => {
   let config = await Configuracion.findOne();
   if (!config) {

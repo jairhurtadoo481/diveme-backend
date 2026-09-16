@@ -2,7 +2,7 @@ const Reserva = require("../models/Reserva");
 const Usuario = require("../models/Usuario");
 const Producto = require("../models/Producto");
 const Configuracion = require("../models/Configuracion");
-const subirImagen = require("../config/cloudinaryUpload");
+const { subirImagen } = require("../config/cloudinaryUpload");
 
 const nombreSucursal = {
   sucursal1: "Sucursal 1",
